@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#FFFFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFFFF</color>
+    <color name="colorAccent">#2196F3</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="color_FF4437">#FF4437</color>
+    <color name="color_FF5C5C">#ff5C5C</color>
+    <color name="color_save_image">#80D8D8D8</color>
+    <color name="image_balck">#000102</color>
+    <color name="transparent10">#1A000000</color>
+    <color name="transparent90_white">#E5ffffff</color>
+    <color name="red">#d01716</color>    <!-- 红色 -->
+
+
+</resources>

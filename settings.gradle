@@ -1,0 +1,3 @@
+include ':LibEasyGlide'
+include ':app'
+rootProject.name = "BeautifulGirl2"

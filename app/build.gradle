@@ -1,0 +1,92 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.jloveh.beautifulgirl2"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        dataBinding = true
+    }
+}
+
+dependencies {
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //https://www.wanandroid.com/maven_pom/index?k=viewpager2
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+
+    //https://github.com/li-xiaojun/XPopup
+    implementation 'com.lxj:xpopup:2.2.13'
+
+    //https://github.com/hegaojian/JetpackMvvm
+    implementation 'me.hegj:JetpackMvvm:1.2.0'
+
+    //Utils https://github.com/Blankj/AndroidUtilCode/blob/master/lib/utilcode/README-CN.md
+    implementation 'com.blankj:utilcodex:1.30.5'
+
+    // java爬虫 https://jsoup.org/
+    implementation 'org.jsoup:jsoup:1.13.1'
+
+    //指示器库  https://github.com/hackware1993/MagicIndicator
+    implementation 'com.github.hackware1993:MagicIndicator:1.7.0'
+
+    //图片加载 https://github.com/coil-kt/coil //文档看不懂，暂时放弃
+    //implementation("io.coil-kt:coil:1.1.0")
+
+    //图片加载
+    //https://github.com/BzCoder/EasyGlide  不符合需求，所以添加了module修改了源码
+    //implementation 'com.github.BzCoder:EasyGlide:2.0.0' //kotlin实现版本
+    implementation project(path: ':LibEasyGlide')
+
+    //Adapter框架 https://github.com/CymChad/BaseRecyclerViewAdapterHelper/blob/master/readme/0-BaseRecyclerViewAdapterHelper.md
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.6'
+
+    //下拉刷新上拉加载 https://github.com/scwang90/SmartRefreshLayout/tree/androidx
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-x'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-x'
+
+    //自定义程序崩溃页面  https://github.com/Ereza/CustomActivityOnCrash
+    implementation 'cat.ereza:customactivityoncrash:2.3.0'
+
+    //AgentWeb框架 https://github.com/Justson/AgentWeb
+    implementation 'com.just.agentweb:agentweb-androidx:4.1.4' // (必选)
+    implementation 'com.just.agentweb:filechooser-androidx:4.1.4'// (可选)
+    implementation 'com.download.library:downloader-androidx:4.1.4'// (可选)
+}
