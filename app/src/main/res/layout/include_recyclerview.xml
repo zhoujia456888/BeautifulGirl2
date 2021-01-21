@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        <com.scwang.smart.refresh.layout.SmartRefreshLayout
             android:id="@+id/refreshlayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -20,7 +20,7 @@
             app:srlEnableLoadMore="true"
             app:srlPrimaryColor="@color/color_FF5C5C">
 
-            <com.scwang.smartrefresh.header.MaterialHeader
+            <com.scwang.smart.refresh.header.MaterialHeader
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
@@ -29,10 +29,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
-            <com.scwang.smartrefresh.layout.footer.BallPulseFooter
+            <com.scwang.smart.refresh.footer.BallPulseFooter
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
-        </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
     </merge>
 </layout>

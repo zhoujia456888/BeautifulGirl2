@@ -67,11 +67,11 @@ class MZiTuFragment : BaseFragment<MainViewModel, FragmentBeautifulgirlBinding>(
         presentPage = mzituUrl
         GlobalScope.launch(Dispatchers.IO) {
             var url = "${mzituUrl}page/$page/"
-         //   LogUtils.e("mzituUrl:" + url)
+            //   LogUtils.e("mzituUrl:" + url)
             val doc: Document = Jsoup.connect(url).userAgent(UserAgent).get()
 
             var postlist = doc.select("div.postlist").select("li")
-          //   LogUtils.e("postlist:${postlist.size}")
+            //   LogUtils.e("postlist:${postlist.size}")
 
             beautifulImgDataList.clear()
 
@@ -80,7 +80,7 @@ class MZiTuFragment : BaseFragment<MainViewModel, FragmentBeautifulgirlBinding>(
 
                 var picturesDetailsUrl = it.select("a").attr("abs:href")
 
-                beautifulImgData = BeautifulImgData(mzituUrl, beautifulImgUrl, picturesDetailsUrl,url)
+                beautifulImgData = BeautifulImgData(mzituUrl, beautifulImgUrl, picturesDetailsUrl, url)
                 beautifulImgDataList.add(beautifulImgData)
             }
 

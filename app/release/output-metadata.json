@@ -10,9 +10,9 @@
     {
       "type": "SINGLE",
       "filters": [],
-      "versionCode": 1,
-      "versionName": "1.0",
-      "outputFile": "app-release.apk"
+      "versionCode": 2,
+      "versionName": "1.0.1",
+      "outputFile": "BeautifulGirl2_v1.0.1_2_20210121_release.apk"
     }
   ]
 }

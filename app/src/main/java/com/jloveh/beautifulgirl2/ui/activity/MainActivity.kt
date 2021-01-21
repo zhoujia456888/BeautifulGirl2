@@ -50,7 +50,9 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>() {
             XPopup.Builder(this)
                 .asInputConfirm(
                     "请输入地址",
-                    "如果不能访问，那就用自带浏览器进去98tang.com，复制网页上的地址粘贴到这里."
+                    "如果不能访问，那就用自带浏览器进去98tang.com，复制网页上的地址粘贴到这里.",
+                    "${webUrlSp.getString("webUrl", "https://www.98awwyou21.xyz")}",
+                    "https://www.98tang.com"
                 ) {
                     webUrlSp.put("webUrl", it)
                 }.show()
