@@ -2,23 +2,18 @@ package com.jloveh.beautifulgirl2.app.ext
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.content.Intent
 import android.graphics.Color
 import android.view.View
 import android.view.animation.AccelerateInterpolator
 import android.view.animation.DecelerateInterpolator
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.jloveh.beautifulgirl2.R
 import com.jloveh.beautifulgirl2.app.weight.viewpage.ScaleTransitionPagerTitleView
-import com.jloveh.beautifulgirl2.ui.activity.PicturesDetailsActivity
-import com.jloveh.beautifulgirl2.ui.activity.WebActivity
 import me.hgj.jetpackmvvm.base.appContext
 import me.hgj.jetpackmvvm.ext.util.toHtml
 import net.lucode.hackware.magicindicator.MagicIndicator

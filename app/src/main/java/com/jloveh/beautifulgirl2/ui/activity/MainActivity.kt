@@ -1,5 +1,7 @@
 package com.jloveh.beautifulgirl2.ui.activity
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
@@ -15,6 +17,7 @@ import com.jloveh.beautifulgirl2.ui.fragment.NvShenSFragment
 import com.jloveh.beautifulgirl2.viewmodel.MainViewModel
 import com.lxj.xpopup.XPopup
 import kotlinx.android.synthetic.main.include_viewpager.*
+
 
 class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>() {
 
@@ -43,7 +46,15 @@ class MainActivity : BaseActivity<MainViewModel, ActivityMainBinding>() {
 
         btn_into_web.setOnClickListener {
             LogUtils.e("点击了")
-            ActivityUtils.startActivity(WebActivity::class.java)
+
+            var webUrlSp = webUrlSp.getString("webUrl", "https://www.98awwyou21.xyz")
+            webUrlSp = if (webUrlSp.contains("http")) webUrlSp else "https://$webUrlSp"
+
+            val intent = Intent()
+            intent.action = "android.intent.action.VIEW"
+            val content_url: Uri = Uri.parse(webUrlSp)
+            intent.data = content_url
+            startActivity(intent)
         }
 
         btn_into_web.setOnLongClickListener {

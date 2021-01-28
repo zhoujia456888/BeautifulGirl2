@@ -31,4 +31,3 @@
 * [BaseRecyclerViewAdapterHelper](https://github.com/CymChad/BaseRecyclerViewAdapterHelper/tree/androidx)
 * [Coroutines](https://github.com/Kotlin/kotlinx.coroutines)
 * [CustomActivityOnCrash](https://github.com/Ereza/CustomActivityOnCrash)
-* [AgentWeb](https://github.com/Justson/AgentWeb)

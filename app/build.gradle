@@ -50,7 +50,7 @@ android {
     signingConfigs {
         release {
             //签名文件路径
-            storeFile file { "../keyStorePath.keystore" }
+            storeFile file { "../keyStore.keystore" }
             //签名密码
             storePassword "abcd1234"
             //别名
@@ -61,7 +61,7 @@ android {
 
         debug {
             //签名文件路径
-            storeFile file { "../keyStorePath.keystore" }
+            storeFile file { "../keyStore.keystore" }
             //签名密码
             storePassword "abcd1234"
             //别名
@@ -132,10 +132,6 @@ dependencies {
     //自定义程序崩溃页面  https://github.com/Ereza/CustomActivityOnCrash
     implementation 'cat.ereza:customactivityoncrash:2.3.0'
 
-    //AgentWeb框架 https://github.com/Justson/AgentWeb
-    implementation 'com.just.agentweb:agentweb-androidx:4.1.4' // (必选)
-    implementation 'com.just.agentweb:filechooser-androidx:4.1.4'// (可选)
-    implementation 'com.download.library:downloader-androidx:4.1.4'// (可选)
 }
 
 def releaseTime() {
